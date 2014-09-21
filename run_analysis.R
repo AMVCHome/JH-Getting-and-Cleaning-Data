@@ -50,13 +50,13 @@ filtered.data <- combo.data.all[,(mean.col | std.col)]
 
 #3. Uses descriptive activity names to name the activities in the data set
 activity.info <- read.table("./UCI HAR Dataset/activity_labels.txt", col.names=c("Activity_ID", "Activity_Name"))
-join.data <- join(combo.data.all, activity.info, by="Activity_ID")
+join.data <- join(activity.info, filtered.data,  by="Activity_ID")
 
 #Check above for step #4
 
 #5. From the data set in step 4, creates a second, independent tidy data set with the average of 
 #   each variable for each activity and each subject.
-tidy.data <- ddply(combo.data.all, .(Subject_ID, Activity_ID), function(x) colMeans(x[,3:563]))
+tidy.data <- ddply(join.data, .(Subject_ID, Activity_Name), function(x) colMeans(x[,4:69]))
 write.table(tidy.data, "UCI_HAR_tidy.txt", row.names=FALSE)
 #For testing purpose, I created CSV file for easier view
-#write.csv(tidy.data, "UCI_HAR_tidy.csv", row.names=FALSE)
+write.csv(tidy.data, "UCI_HAR_tidy.csv", row.names=FALSE)

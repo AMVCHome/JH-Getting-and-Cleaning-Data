@@ -3,9 +3,9 @@ JH-Getting-and-Cleaning-Data
 
 # Getting and Cleaning Data - Project
 
-- This repository contains R code that downloads and does some preprocessing on Human Activity Recognition data set. 
-- A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-- Here are the data for the project: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+- This repository contains R scrip that downloads and does preprocessing on Human Activity Recognition data set to create a tidy dataset. 
+- A full description about source project is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+- Here are the data for the project and further details on dataset: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 # Introduction
 
